@@ -1,0 +1,39 @@
+# Also has alot of errors
+
+
+import hashlib
+input_text = input()
+list_input = txt.split()
+inFile = open(str(list_input[0]),'r')
+buff = inFile.read()
+
+
+func = list_input[1] 
+hash1 = hashlib.func(buff).hexdigest()
+hash = str(hash1)
+
+
+#txt = "file_01.bin md5 aaeab83fcc93cd3ab003fa8bfd8d8906"
+
+
+if list_input[0] == "file_01.bin":
+  if hash == list_input[2]:
+    print("OK")
+  else: 
+    print("NOT FOUND")
+
+if list_input[0] == "file_02.bin":
+  if hash == list_input[2]:
+    print("OK")
+  else: 
+    print("NOT FOUND")
+
+if list_input[0] == "file_04.text":
+  if hash == list_input[2]:
+    print("OK")
+  else: 
+    print("NOT FOUND")
+
+else:
+  print("NOT FOUND")
+
