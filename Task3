@@ -1,0 +1,20 @@
+#Class Test System
+class Test_System:
+  start_time = time.time()
+  def prep(start_time):
+  print(start_time%1==0)
+
+  def run():
+    #list all files
+  
+  def clean_up():
+    pass
+
+class Test1:
+#[prep] If the current system time taken as an integer since the Unix Epoch is not divisible by 2, interrupt the test case.
+#[run] List all files in the user’s home directory.
+#[clean_up] (do nothing).
+class Test2:
+#[prep] If the current host’s RAM is less than one gigabyte, interrupt the test case.
+#[run] Create a file test of size 1024 KB with random contents.
+#[clean_up] Remove the file test.
