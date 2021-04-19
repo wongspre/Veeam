@@ -1,0 +1,27 @@
+#< source_path =C:\Windows\system32">
+#<destination_path="C:\Program files">      
+#<file_name="kernel32.dll">
+
+## This problem has error about the printing format
+
+import xml.etree.ElementTree as etree
+
+users = etree.Element("config")
+
+users_data = [
+('"C:\Windows\system32\"', '"C:\Program files"', '"kernel32.dll"'),
+('"/var/log"', '"/etc"', '"server.log"'),
+]
+
+for user_data in users_data:
+    user = etree.SubElement(users, "file")
+    user.set("file_name", user_data[2])
+    user.set("source_path", user_data[0])
+    user.set("destination_path", user_data[1])
+
+
+string = etree.tostring(users, encoding='unicode')
+for key in [' ', '>']:
+    string = str(key + '\n').join(string.split(key))
+
+print(string)
